@@ -2,11 +2,8 @@
 <?php
     echo "Hello world";
 
-    $pdo = new PDO(
-        "mysql:host=localhost;dbname=library;charset=utf8mb4",
-        "library_admin",
-        "admin1"
-    );
+    require "config.php";
+
 
     $stmt = $pdo->query("SELECT * FROM author");
 
