@@ -4,7 +4,8 @@
     <title>home</title>
     </head>
     <body>
+        <?php require_once('./inc/header.php'); ?>
         This is the home page<br />
-        <?php require_once('./inc/nav.php'); ?>
-    </body>
+        </body>
 </html>
+<?php require './inc/footer.php'; ?>

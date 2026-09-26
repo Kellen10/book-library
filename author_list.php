@@ -1,4 +1,3 @@
-
 <?php
     require "./config/config.php";
 
@@ -6,13 +5,13 @@
     $stmt = $pdo->query("SELECT * FROM author");
 
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
     <head>
     <title>author list</title>
     </head>
     <body>
+        <?php require_once('./inc/header.php'); ?>
         <?php require_once('./inc/nav.php'); ?>
         This is the author list<br />
         <table border=1>
@@ -32,4 +31,5 @@
             <?php } ?>
         </table>
     </body>
+    <?php require './inc/footer.php'; ?>
 </html>

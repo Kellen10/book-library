@@ -4,7 +4,7 @@
     // $stmt = $pdo->query("SELECT * FROM author");
     // $authors = $stmt-> fetchAll(PDO::FETCH_ASSOC)
 ?>
-        <?php require_once('./inc/nav.php'); ?>
+<?php require_once('./inc/header.php'); ?>
 
 <form action="./book_create_do.php" method="post">
 
@@ -15,3 +15,4 @@
     <button type="submit">Submit</button>
 
 </form>
+<?php require './inc/footer.php'; ?>
