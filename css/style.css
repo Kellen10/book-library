@@ -1,0 +1,23 @@
+body {
+    font-family: "Times New Roman";
+    color: darkblue;
+    background-color: lightblue;
+    padding: 10px
+}
+
+header, footer, nav {
+    background-color: lightblue;
+    padding: 10px
+}
+
+p {
+    padding-left: 10px
+}
+
+a {
+    color: blue;
+}
+
+form, table {
+    background-color: white;
+}

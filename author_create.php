@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Add Author</title>
     </head>
         <body>
-    <?php require_once './inc/header.php'; ?>
+            <?php require_once './inc/header.php'; ?>
+            <?php require_once('./inc/nav.php'); ?>
             <form action="./author_create_do.php" method="get">
                 <label>Name:</label>
                 <input type="text" name="name" required>

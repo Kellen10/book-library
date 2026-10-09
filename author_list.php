@@ -8,12 +8,14 @@
 ?><!DOCTYPE html>
 <html>
     <head>
-    <title>author list</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>author list</title>
     </head>
     <body>
         <?php require_once('./inc/header.php'); ?>
         <?php require_once('./inc/nav.php'); ?>
         This is the author list<br />
+        <a href="./author_create.php">Add</a>
         <table border=1>
             <tr>
                 <td>pk</td>
@@ -27,9 +29,12 @@
                     <td><?= $row['name'] ?></td>
                     <td><?= $row['accolades'] ?></td>
                     <td><?= $row['country'] ?></td>
+                    <td>detail</td>
+                    <td>edit</td>
+                    <td><a href="./author_delete_do.php?pk_author=<?= $row['pk_author'] ?>">Delete</a> </td>
                 </tr>
             <?php } ?>
         </table>
+        <?php require './inc/footer.php'; ?>
     </body>
-    <?php require './inc/footer.php'; ?>
 </html>

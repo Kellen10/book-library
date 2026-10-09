@@ -1,7 +1,8 @@
         <nav>
-            <a href="./home.php">home</a> 
-            <a href="./author_create.php">author create</a> 
-            <a href="./author_list.php">authors</a> 
-            <a href="./book_create.php">book create</a> 
-            <a href="./index.php">logout</a>
+            <a href="./home.php">Home</a> 
+            <a href="./author_list.php">Author list</a>
+            <a href="./my_library.php">Library</a> 
+            <a href="./author_create.php">Add Author</a> 
+            <a href="./book_create.php">Add Book</a> 
+            <a href="./index.php">Logout</a>
         </nav>
