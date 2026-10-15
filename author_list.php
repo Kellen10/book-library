@@ -2,7 +2,7 @@
     require "./config/config.php";
 
 
-    $stmt = $pdo->query("SELECT * FROM author");
+    $stmt = $pdo->query("SELECT * FROM author WHERE ts_deleted IS null");
 
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?><!DOCTYPE html>
