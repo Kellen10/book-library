@@ -5,6 +5,10 @@
     $stmt = $pdo->query("SELECT * FROM author WHERE ts_deleted IS null");
 
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if(isset($_GET['action'])) $action = $_GET['action'];
+    if(isset($_GET['status'])) $status = $_GET['status'];
+    if(isset($_GET['msg'])) $msg = $_GET['msg'];
+
 ?><!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +18,19 @@
     <body>
         <?php require_once('./inc/header.php'); ?>
         <?php require_once('./inc/nav.php'); ?>
-        This is the author list<br />
+        <h1>This is the author list</h1>
+
+        <?php if(isset($_GET['action'])) { ?>
+            <div class="<?= $status?>">
+                <?= $msg ?>
+
+                <?php if($action == 'delete') {?>
+                    <p>Undo?<p/>
+                    <a href="./author_delete_do.php?pk_author=<?= $_GET['pk_author'] ?>">Yes</a>
+                    <a href="./author_list.php">No</a>
+                <?php } ?>
+            </div>        
+        <?php } ?>
         <a href="./author_create.php">Add</a>
         <table border=1>
             <tr>
